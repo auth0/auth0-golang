@@ -4,7 +4,7 @@ This is the seed project you need to use if you're going to create regular GoLan
 #Running the example
 In order to run the example you need to have go and goget installed.
 
-You also need to set the ClientSecret, ClientId, CallbackURL and Domain for your Auth0 app as enviroment variables with the following names respectively: `AUTH0_CLIENT_SECRET`, `AUTH0_CLIENT_ID`, `AUTH0_CALLBACK_URL` and `AUTH0_DOMAIN`.
+You also need to set the ClientSecret, ClientId, CallbackURL and Domain for your Auth0 app as environment variables with the following names respectively: `AUTH0_CLIENT_SECRET`, `AUTH0_CLIENT_ID`, `AUTH0_CALLBACK_URL` and `AUTH0_DOMAIN`.
 
 For that, if you just create a file named `.env` in the directory and set the values like the following, the app will just work:
 
@@ -16,6 +16,6 @@ AUTH0_DOMAIN=myCoolDomain
 AUTH0_CALLBACK_URL=http://localhost:3000/callback
 ````
 
-Once you've set those 3 enviroment variables, you need to install all `Go` dependencies. For that, just run `go get .`
+Once you've set those 3 environment variables, you need to install all `Go` dependencies. For that, just run `go get .`
 
 Finally, run `go run main.go server.go` to start the app and try calling [http://localhost:3000/](http://localhost:3000/)
