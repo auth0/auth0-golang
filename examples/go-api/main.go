@@ -68,5 +68,8 @@ func PingHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func SecuredPingHandler(w http.ResponseWriter, r *http.Request) {
+	allowHeaders := r.Header.Get("Access-Control-Request-Headers")
+	w.Header().Set("Access-Control-Allow-Origin", "*")
+	w.Header().Set("Access-Control-Allow-Headers", allowHeaders)
 	respondJson("All good. You only get this message if you're authenticated", w)
 }
