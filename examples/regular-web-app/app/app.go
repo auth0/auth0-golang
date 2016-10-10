@@ -9,6 +9,9 @@ var (
 )
 
 func Init() {
-	GlobalSessions, _ = session.NewManager("memory", `{"cookieName":"gosessionid","gclifetime":3600}`)
+	GlobalSessions, _ = session.NewManager("memory", &session.ManagerConfig{
+		CookieName: "gosessionid",
+		Gclifetime: 3600,
+	})
 	go GlobalSessions.GC()
 }
